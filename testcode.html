@@ -36,12 +36,12 @@
   var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic']
 
   if (diaNom < 10) { diaNom = '0' + diaNom ;}
-  if (mesNom < 10) { mesNom = '0' + mesNom ;}
+  if (mesNom < 10) { mesNomb = '0' + mesNom ;}
   if(horas < 10) { horas = '0' + horas; }
   if(minutos < 10) { minutos = '0' + minutos; }
   if(segundos < 10) { segundos = '0' + segundos; }
 
-  document.getElementById("fecha").innerHTML = '<b>'+dias[dia-1]+'</b>'+' -->'+diaNom+'/'+mesNom+'/'+anioNom;
+  document.getElementById("fecha").innerHTML = '<b>'+dias[dia-1]+'</b>'+' -->'+diaNom+'/'+meses[mesNom]+'/'+anioNom;
   document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
 }
 window.onload = function() {
