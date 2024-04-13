@@ -8,7 +8,7 @@
 </head>
 <style>
   body{
-    background-color: navy;
+    background-color: #57A3EB;
     color:white;
   }
 #reloj, #fecha{
@@ -16,12 +16,21 @@
 	font-weight: bold;
 	font-size: 20px;
 }
+#reloj{
+  background-color: cyan;
+  color:red;
+}
 
 </style>
 <body>
+  <h2>Codigos miscelaneos con colaboradores </h2>
+ <hr>
   <h2>Fecha y Hora Local</h2>
 <div id="fecha" ></div><br>
-<div id="reloj" ></div>
+<div id="reloj" ></div><br>
+<hr>
+<p><img src="img/clock.png" alt="reloj" width="10%" height="10%"> </p>
+
 <script>
 	function muestraReloj() {
   var fechaHora = new Date();
@@ -34,6 +43,8 @@
   var anioNom = fechaHora.getFullYear();
   var dias = ['Lun','Ma','Mie','Ju','Vi','Sa','Dom']
   var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic']
+   
+   
 
   if (diaNom < 10) { diaNom = '0' + diaNom ;}
   if (mesNom < 10) { mesNomb = '0' + mesNom ;}
@@ -43,11 +54,12 @@
 
   document.getElementById("fecha").innerHTML = '<b>'+dias[dia-1]+'</b>'+' -->'+diaNom+'/'+meses[mesNom]+'/'+anioNom;
   document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+
 }
 window.onload = function() {
   setInterval(muestraReloj, 1000);
-}
 
+}
 
 </script>
 </body>
