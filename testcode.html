@@ -43,6 +43,10 @@ p.capitalizar::first-letter{
 
 <hr>
 <p><img src="img/clock.png" alt="reloj" width="10%" height="10%"> </p>
+<hr>
+<div id="divmouse" onmousemove="dateMouse(event)" onmouseout="clearCoor()">Inicio</div>
+
+<hr>
 <p class="negrita">Descripción:</p>
 <p class="negrita capitalizar"> 
 El tiempo es el concepto que señala la dimensión física donde suceden los distintos estados que atraviesan a la materia. También se trata del término empleado para referirse al período durante el que se desarrolla un hecho o realiza una acción. En relación con este último significado podemos decir que el tiempo es una magnitud física que sirve para medir la duración de los acontecimientos.</p>
@@ -79,6 +83,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
   document.getElementById("fecha").innerHTML = '<b>'+dias[dia-1]+'</b>'+' -->'+diaNom+'/'+meses[mesNom]+'/'+anioNom;
   document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+  
 
 
 }
@@ -86,6 +91,20 @@ window.onload = function() {
   setInterval(muestraReloj, 1000);
 
 }
+
+  function dateMouse(){
+         document.getElementById("divmouse").innerHTML='sobre el div';
+         document.getElementById("divmouse").style.background = "green";
+        }
+  function clearCoor(){
+      document.getElementById("divmouse").innerHTML='saliendo de div';
+      document.getElementById("divmouse").style.background = "orange";
+      setTimeout(function() {
+        document.getElementById("divmouse").innerHTML='Inicio';
+        document.getElementById("divmouse").style.background = "none";
+            }, 2000)
+            
+    }
 
 </script>
 </body>
