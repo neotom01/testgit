@@ -1,6 +1,0 @@
-registro 1
-
-registro 2 
-
-registro 3
-
